@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Legal Decipher System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Legal Decipher System</h1>
+    <p class="subtitle">
+      Code / definition cross-reference for statutory, commercial, and fictional terminology
+    </p>
+  </header>
+
+  <main class="layout">
+    <section class="panel left">
+      <h2>Term Search</h2>
+      <input id="termSearch" class="search-input"
+             placeholder="Search terms (person, corporation, money, ...)" />
+      <ul id="termList" class="term-list"></ul>
+    </section>
+
+    <section class="panel center">
+      <h2>Term Detail</h2>
+      <div id="termDetail" class="detail-panel">
+        <p>Select a term to view definitions and cross-references.</p>
+      </div>
+    </section>
+
+    <section class="panel right">
+      <h2>Code Section Finder</h2>
+      <input id="codeSearch" class="search-input"
+             placeholder="Search USC / CFR / Constitution / UCC..." />
+      <ul id="codeList" class="code-list"></ul>
+      <div id="codeDetail" class="detail-panel"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>JSON corpus versioned on GitHub. Extend with your own annotations and citations.</p>
+  </footer>
+
+  <script src="src/dataLoader.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/search.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
